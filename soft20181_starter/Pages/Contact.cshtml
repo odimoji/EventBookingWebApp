@@ -1,0 +1,70 @@
+﻿@page
+@model soft20181_starter.Pages.ContactModel
+@{
+}
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<section class="content ">
+    <div class="heading">
+        <h3> CONTACT US <i class="fa-regular fa-face-smile heading"></i></h3>
+        <h2> @Model.Message</h2>
+        <h2>@Model.Message1</h2>
+
+    </div>
+    <div class="form-area">
+        <form method="post" id="contact-form">
+            <div class="control-wrap">
+                <label for="firstname">First name</label>
+                <input type="text" asp-for="ContactInfo.Firstname" id="firstname">
+                <span asp-validation-for="ContactInfo.Firstname" class="text-danger"></span>
+
+            </div>
+
+            <div class="control-wrap">
+                <label for="lastname">Last name</label>
+                <input type="text" asp-for="ContactInfo.Lastname" id="lastname">
+                <span asp-validation-for="ContactInfo.Lastname" class="text-danger"></span>
+            </div>
+
+            <div class="control-wrap">
+                <label for="email">Email</label>
+                <input type="text" asp-for="ContactInfo.Email" id="email">
+                <span asp-validation-for="ContactInfo.Email" class="text-danger"></span>
+
+            </div>
+            <div class="control-wrap">
+                <label for="phone">Phone No</label>
+                <input type="text" asp-for="ContactInfo.Phone" id="phone">
+                <span asp-validation-for="ContactInfo.Phone" class="text-danger"></span>
+
+            </div>
+            <div class="control-wrap ">
+                <label for="message">Message</label>
+                <input type="text" asp-for="ContactInfo.Customermessage" id="message">
+                <span asp-validation-for="ContactInfo.Customermessage" class="text-danger"></span>
+
+            </div>
+            <div class="control-wrap centered">
+                <button type="submit" class ="save__btn"id="save-btn">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+
+    <div class="contact-area">
+        <div class="row">
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+

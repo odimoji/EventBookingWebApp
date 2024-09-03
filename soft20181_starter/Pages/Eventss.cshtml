@@ -1,0 +1,112 @@
+﻿@page
+@model soft20181_starter.Pages.EventssModel
+@{
+}
+<div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>WELCOME TO</h1>
+            <h2>STRAIGHT OUTTA LAGOS</h2>
+            <p>EVENTS PAGE</p>
+            <button class="main__btn"><a href="#events">Our Events</a></button>
+        </div>
+        <div class="main__img--container">
+            <img src="images/pic1.svg" alt="pic1" id="main__img">
+        </div>
+    </div>
+</div>
+<!-- Services Section-->
+<!-- Add this form to your HTML -->
+
+    <input type="text" id="searchInput" placeholder="Search">
+
+
+@foreach (var theEvent in @Model.Eventss)
+{
+
+    <ul class="eventsContainer" id="events" eventsContainer>
+        <img src="@theEvent.ImageUrl" alt="@theEvent.Title Image" width="100" class="events">
+        <div class="eventDetails">
+            <h2>@theEvent.Title</h2>
+            <a href="@theEvent.LocationUrl" class="bi bi-geo-alt-fill" id="location-icon"></a>
+            <p>@theEvent.Location</p>
+            <p>@theEvent.EventDate</p>
+            <a asp-page="EventDetail" asp-route-id="@theEvent.Id">
+                <button class="colorfont">Learn More</button>    
+            </a>
+        
+            <a asp-page="EditEvent" asp-route-id="@theEvent.Id" asp-page-handler="Delete"
+               class="btn btn-danger">Delete</a>
+        </div>
+    </ul>
+    
+}
+
+<div class="services">
+    <h1> See what the hype is about! </h1>
+    <div class="services__container">
+        <div class="services__card">
+            <h2>Experience Bliss</h2>
+            <p>AI powered Technology</p>
+            <button>Get started</button>
+        </div>
+        <div class="services__card">
+            <h2>Are you ready?</h2>
+            <p>Take the leap</p>
+            <button>Get started</button>
+        </div>
+    </div>
+</div>
+
+<style>
+  /*   .search-container {
+        
+        margin: 20px auto;
+        position: relative;
+    } */
+
+    .search-label {
+        width: 100px
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #aaa;
+        transition: 0.2s;
+        pointer-events: none;
+        border: 1px solid black;
+    }
+
+    #searchInput:focus + .search-label,
+    #searchInput:not(:placeholder-shown) + .search-label {
+        top: -10px;
+        font-size: 12px;
+        color: #333;
+        background-color: white;
+        padding: 0 4px;
+    }
+
+    #searchInput {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: 0.2s;
+    }
+</style>
+
+
+<script>
+    document.getElementById('searchInput').addEventListener('input', function () {
+        var searchTerm = this.value.trim().toLowerCase();
+        var events = document.querySelectorAll('.eventsContainer');
+
+        events.forEach(function (event) {
+            var title = event.querySelector('h2').innerText.toLowerCase();
+            if (title.includes(searchTerm)) {
+                event.style.display = 'block';
+            } else {
+                event.style.display = 'none';
+            }
+        });
+    });
+</script>

@@ -1,0 +1,25 @@
+﻿@page
+@model soft20181_starter.Pages.BookingsModel
+@{
+}
+<h1>Your Bookings</h1>
+
+@foreach (var Booking in @Model.Bookings)
+{
+
+    <ul class="eventsContainer" id="events" eventsContainer>
+        <img src="@Booking.ImageUrl" alt="@Booking.Title Image" width="100" class="events">
+        <div class="eventDetails">
+            <h2>@Booking.Title</h2>
+            <p hidden>@Booking.Id</p>
+            <p>@Booking.Location</p>
+            <p>@Booking.EventDate</p>
+            <p> Tickets: @Booking.Quantity</p>
+            <div class="control-wrap centered">
+                <a asp-route-id="@Booking.Id" asp-page-handler="Delete"
+                   class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </ul>
+
+}

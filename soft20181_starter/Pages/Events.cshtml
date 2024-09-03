@@ -1,0 +1,31 @@
+﻿@page
+@model EventsModel
+@{
+}
+
+<!--Hero Section-->
+<div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>WELCOME TO</h1>
+            <h2>STRAIGHT OUTTA LAGOS</h2>
+            <p>EVENTS PAGE</p>
+            <button class="main__btn"><a href="#events">Our Events</a></button>
+        </div>
+        <div class="main__img--container">
+            <img src="images/pic1.svg" alt="pic1" id="main__img">
+        </div>
+    </div>
+</div>
+<!-- Services Section-->
+<!-- Add this form to your HTML -->
+<form id="eventControls">
+    <p></p>
+    <label for="searchTerm">Search:</label>
+    <input type="input-text" id="searchTerm" data-search>
+    <p></p>
+</form>
+
+<ul class="eventsContainer" id="events" eventsContainer></ul>
+
+

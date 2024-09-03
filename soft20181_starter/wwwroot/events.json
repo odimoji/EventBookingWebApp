@@ -1,0 +1,27 @@
+{
+    "events":[
+        {"id":"event1", "title": "MLLB", "location": "Mango Night Club", "locationUrl": "https://maps.app.goo.gl/yUcVLsg2NwRGVm1S7" ,  "date": "09-Jun-2024", "imageUrl": "images/MLLB.jpeg", "description":"Straight Outta Lagos's premier solo event promises to be one for the ages. With superstar DJ's ATOBZ and 2SEVV bringing the heat from Lagos, and resident DJ's RUKKY and VIDO doing their thing. Special performances from BUZAGA, LORD B, and DAYØ, NOZZA. It is sure to be a night to remember." },
+
+
+        {"id":"event2", "title": "WAVED", "location": "Mango Night Club", "locationUrl": "https://maps.app.goo.gl/yUcVLsg2NwRGVm1S7" ,"date": "11-NOV-2024", "imageUrl": "images/WAVED.jpg", "description":"The ULTIMATE Friday clubnight bursting with flavour and fun with all drinks just £2 🤑 Expect non-stop student anthems, exciting competitions, mind-blowing giveaways and epic stage games that will keep the energy levels soaring all night long! Don't miss the chance to win fantsatic prizes and show off your skills on the Juiced stage!"},
+        
+        
+        {"id":"event3", "title": "STUPID-CUPID", "location": "CAVE", "locationUrl": "https://maps.app.goo.gl/jKCpBk6Lp6nznuK37" , "date": "12-DEC-2024", "imageUrl": "images/CIRCO-LOCO.jpg", "description":"The dance floor is about to heat up with the best of sounds. It’s sure going to be pure entertainment as our Dj lineup are the best of both worlds. As usual we bring you a premium nightclub experience every Saturday in the biggest afro beats club in the Midlands, It's all about celebrating with good vibes, style , luxury and elegance. We always promise you satisfaction and all night of enjoyment." },
+        
+        
+        {"id":"event4", "title": "NOSTALGIA", "location": "King of Clubs", "locationUrl": "https://maps.app.goo.gl/vnzyJuD2ydFoSPPV8", "date": "17-OCT-2024", "imageUrl": "images/MLLB DENIM.jpg", "description":"StraightOuttaLagos is back with another crazy event and it promises to be one for the ages. With superstar DJ’s SLY,  ATOBZ, and 2SEVV bringing the heat from Lagos and special guests J&S bringing a whole different vibe. Come dressed in your DENIM fits and experience a night filled with Afrobeats and Amapiano music that feels just like Lagos!" },
+        
+        
+        {"id":"event5", "title": "WOZA", "location": "Motto Night Club", "locationUrl":"https://maps.app.goo.gl/9yjHnoijnSMYx6vM7" , "date": "30-JAN-2024", "imageUrl": "images/WOZA.jpg", "description":"Calling all sexy and suave partygoers, This will be a sophisticated night for the grown and sexy in Birmingham" },
+        
+        
+        {"id":"event6", "title": "SANTA MARIA", "location": "Power Lounge", "locationUrl": "https://maps.app.goo.gl/tBZ2NJoo4bf7YRBNA", "date": "23-DEC-2024", "imageUrl": "images/SM-FLYER.jpeg", "description":"'Temptation Thursdays' takes over Sophy every Thursday !Hip-Hop, R&B, Bashment, Afrobeats, Desi, future sounds and party bangers. With a fast-paced house party vibe, this is a clubbing experience for the new generation, with no rules but no one's on their best behaviour!!"},
+        
+        
+        {"id":"event7", "title": "FTR", "location": "PAVO", "locationUrl": "https://maps.app.goo.gl/Q5UkhGAkuANLfuFr5" , "date": "21-MAR-2024", "imageUrl": "images/FTR.jpg", "description":"Calling all sexy and suave partygoers, This will be a sophisticated night for the grown and sexy in London!Party with us in the heart of the city of bright lights, crazy dreams, and spectacular parties. Come and enjoy a night of sensual RnB, Hip Hop, Afrobeats and Bashment."},
+        
+        
+        {"id":"event8", "title": "NEWNATION", "location": "Motto Night Club", "locationUrl":"https://maps.app.goo.gl/9yjHnoijnSMYx6vM7" ,"date": "12-FEB-2024", "imageUrl": "images/LNN.jpg", "description":"It’s Back .. Bigger & Better Vip Night Clubbing Experience #FortuneSaturday 27th  January 💯🙌🏼🔥"  }
+
+    ]
+}

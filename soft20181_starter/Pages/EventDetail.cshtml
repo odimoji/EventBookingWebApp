@@ -1,0 +1,63 @@
+﻿@page
+@model soft20181_starter.Pages.EventDetailModel
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+@{
+    if (Model.AnEvent != null)
+    {
+        <ul class="eventsLister">
+            <li class="dynamicEventDetails" id="@Model.AnEvent.Id">
+                <header>
+                    <h1>@Model.AnEvent.Title</h1>
+
+                    <h2>@Model.AnEvent.Location</h2>
+                </header>
+
+                <section class="event-details">
+                    Event details content
+                    <center><h1>INFO</h1></center>
+                    <p class="">@Model.AnEvent.Description</p>
+                    <center>
+                        <img src="@Model.AnEvent.ImageUrl" alt="@Model.AnEvent.Title Image" id="event_img" />
+                    </center>
+                    <p>Additional details and information...</p>
+
+                </section>
+
+                <h2> Booking info</h2>
+                <form method="post">
+                    <div>
+                        <input asp-for="@Model.ABooking.Title" type="text" id="title" value="@Model.AnEvent.Title" readonly />
+                    </div>
+                    <div>
+                        <input asp-for="@Model.ABooking.Location" type="text" id="location" value="@Model.AnEvent.Location" readonly />
+                    </div>
+                    <div>
+                        <input asp-for="@Model.ABooking.EventDate" type="text" id="date" value="@Model.AnEvent.EventDate" readonly />
+                    </div>
+                    <div>
+                        <input asp-for="@Model.ABooking.ImageUrl" type="text" id="ImageUrl" value="@Model.AnEvent.ImageUrl" readonly />
+                    </div>
+                    <div class="control-wrap ">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" asp-for="@Model.ABooking.Quantity" id="quantity" min="1">
+
+
+                    </div>
+                    <button type="submit" class="colorfont">Book Event</button>
+
+                </form>
+            </li>
+        </ul>
+    }
+
+    else
+    {
+        <p>No event found with the provided ID.</p>
+    }
+}
+    
+
+

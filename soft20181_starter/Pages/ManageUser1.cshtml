@@ -1,0 +1,32 @@
+﻿@page
+@model soft20181_starter.Pages.ManageUser1Model
+@{
+
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>User Names</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.users)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Email</td>
+                <td>
+                    <form method="post" asp-page-handler="Update" asp-route-id="@user.Id">
+                        <input asp-for="passwordString" />
+                        <input type="submit" value="Update Password" class="btn btn-default" />
+                    </form>
+                </td>
+                <td>
+                    <a class=" btn btn-sm btn-danger order-button float-right" asp-page="/ManageUser1" asp-route-id="@user.Id" asp-page-handler="Delete">Delete User</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

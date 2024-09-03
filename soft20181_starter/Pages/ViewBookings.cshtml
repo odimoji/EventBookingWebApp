@@ -1,0 +1,25 @@
+﻿@page
+@model soft20181_starter.Pages.ViewBookingsModel
+@{
+}
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Bookings</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model.Bookings)
+        {
+            <tr>
+                <td>@booking.UserId</td>
+                <td>@booking.Title</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

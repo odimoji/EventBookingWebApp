@@ -1,0 +1,28 @@
+﻿@page
+@model soft20181_starter.Pages.ManageUserModel
+@{
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>User Roles</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var role in Model.roles)
+        {
+            <tr>
+                <td>@role.Id</td>
+                <td>@role.Name</td>
+                <td>
+                    <a class=" btn btn-sm btn-danger order-button float-right" asp-page="/ManageUser" asp-route-id="@role.Id" asp-page-handler="Delete">Delete Role</a>
+                        </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+</table>
